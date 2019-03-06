@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<div class = "container" style="text-align:center">
+  <h1>
+    {{ title }} 
+  </h1>
+  <h2>{{ message }}</h2>
+  <button (click)=onClick(value)>Sign in</button>
+  <div *ngIf = "displayLogin; then Login"></div>
+  <ng-template #Login>
+    <app-login (userEvent)="message=$event" [cambrianData] = "title"></app-login>
+  </ng-template>
+  
+ 
+</div>
