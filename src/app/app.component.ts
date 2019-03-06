@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'login-form';
+  private title = 'CambrianZ';
+  public message = '';
+  click = false;
+  public displayLogin = false;
+  onClick(login) {
+    this.click = true;
+    if (this.click === true && this.displayLogin === false) {
+      this.displayLogin = true;
+      return true;
+    } else {
+    this.click = false;
+    this.displayLogin = false;
+    return false;
+    }
+  }
+
 }
